@@ -1,23 +1,26 @@
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, sans-serif;
     background-color: #0f172a;
     color: #f8fafc;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .container {
     text-align: center;
     width: 90%;
     max-width: 600px;
+    transition: opacity 0.5s ease;
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
+    letter-spacing: -1px;
 }
 
 .logo span {
@@ -33,37 +36,90 @@ body {
 input {
     flex: 1;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #334155;
     background: #1e293b;
     color: white;
     font-size: 1rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #38bdf8;
 }
 
 button {
     padding: 10px 25px;
     background-color: #38bdf8;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     color: #0f172a;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 button:hover {
     background-color: #7dd3fc;
+    transform: translateY(-2px);
 }
 
 .quick-links {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .chip {
     background: #334155;
     color: #cbd5e1;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+}
+
+/* Footer Styling */
+.transparent-footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.4;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+/* Viewer Styling */
+#viewer-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 100;
+}
+
+.viewer-nav {
+    height: 50px;
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+#back-btn {
+    padding: 5px 15px;
     font-size: 0.8rem;
+}
+
+#content-frame {
+    width: 100%;
+    height: calc(100% - 50px);
+    border: none;
+}
+
+.hidden {
+    display: none;
 }
