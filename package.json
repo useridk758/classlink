@@ -1,7 +1,7 @@
 {
   "name": "gradelink-web",
-  "version": "1.0.0",
-  "description": "A student-focused web portal.",
+  "version": "1.1.0",
+  "description": "Educational resource hub with internal search routing.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
